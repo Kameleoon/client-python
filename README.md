@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Our SDK gives you the possibility of running experiments and activating feature flags on all platforms targeted by the Flutter application framework. Integrating our SDK into your applications is easy, and its footprint (in terms of memory and network usage) is low.
+Our SDK gives you the possibility of running experiments and activating feature flags on your Python platform. Integrating our SDK into your applications is easy, and its footprint (in terms of memory and network usage) is low.
 
 ## Learn more
 
