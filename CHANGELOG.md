@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.0.3 - 2022-04-12
+* Added method for retrieving data from remote source: [`retrieve_data_from_remote_source`](https://developers.kameleoon.com/python-sdk.html#retrieve_data_from_remote_source)
+
 ## 1.0.2 - 2022-02-15
 * Added support of multi-environment for feature flags, Related to [`activate_feature`](https://developers.kameleoon.com/python-sdk.html#activate_feature), [`obtain_feature_variable`](https://developers.kameleoon.com/python-sdk.html#obtain_feature_variable)
 * Added checking for status of site_code (Enable / Disable). Related to [`activate_feature`](https://developers.kameleoon.com/python-sdk.html#activate_feature), [`trigger_experiment`]( https://developers.kameleoon.com/python-sdk.html#trigger_experiment)
