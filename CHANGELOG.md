@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.0.4 - 2022-06-14
+* Fixed issue when [`add_data`](https://developers.kameleoon.com/python-sdk.html#add_data) accepts only first one parameter and ignores others
+
 ## 1.0.3 - 2022-04-12
 * Added method for retrieving data from remote source: [`retrieve_data_from_remote_source`](https://developers.kameleoon.com/python-sdk.html#retrieve_data_from_remote_source)
 
