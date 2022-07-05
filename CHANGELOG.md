@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.0.6 - 2022-07-05
+* Updated package's dependencies
+
 ## 1.0.5 - 2022-06-23
 * Added [`configuration_object`](https://developers.kameleoon.com/python-sdk.html#additional-configuration) parameter as a way to setup KameleoonClient
 
