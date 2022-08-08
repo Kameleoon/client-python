@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.0.8 - 2022-08-08
+* Added [`multi_threading`](https://developers.kameleoon.com/python-sdk.html#additional-configuration) parameter to work in multi-threading environment. By default SDK works in a single thread to avoid GIL's performance issues.
+
 ## 1.0.7 - 2022-07-26
 * Removed extra logging
 
