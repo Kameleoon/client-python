@@ -1,6 +1,23 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.0 - 2023-02-02
+* Added support of new feature flag rules:
+    - [`get_feature_variation_key`](https://developers.kameleoon.com/python-sdk.html#get_feature_variation_key)
+    - [`get_feature_variable`](https://developers.kameleoon.com/python-sdk.html#get_feature_variable)
+    - [`get_feature_all_variables`](https://developers.kameleoon.com/python-sdk.html#get_feature_all_variables)
+    - `activate_feature` -> [`is_feature_active`](https://developers.kameleoon.com/python-sdk.html#is_feature_active)
+* Renaming of methods (old methods warn you on using and will be removed later)
+    - `obtain_visitor_code` -> [`get_visitor_code`](https://developers.kameleoon.com/python-sdk.html#get_visitor_code)
+    - `obtain_variation_associated_data` -> [`get_variation_associated_data`](https://developers.kameleoon.com/python-sdk.html#get_variation_associated_data),
+    - `obtain_feature_all_variables` -> [`get_feature_all_variables`](https://developers.kameleoon.com/python-sdk.html#get_feature_all_variables),
+    - `obtain_experiment_list` -> [`get_experiment_list`](https://developers.kameleoon.com/python-sdk.html#get_experiment_list) & [`get_experiment_list_for_visitor`](https://developers.kameleoon.com/python-sdk.html#get_experiment_list_for_visitor),
+    - `obtain_feature_list` -> [`get_feature_list`](https://developers.kameleoon.com/python-sdk.html#get_feature_list) & [`get_active_feature_list_for_visitor`](https://developers.kameleoon.com/python-sdk.html#get_active_feature_list_for_visitor),
+* Renaming of exceptions:
+    - `NotActivated` -> `NotAllocated`
+* Added possibility to set [`UserAgent`](https://developers.kameleoon.com/python-sdk.html#useragent).
+* Removed `blocking` parameter (blocking mode) [`KameleoonClient`](https://developers.kameleoon.com/python-sdk.html#initializing-the-kameleoon-client) init method
+
 ## 2.0.0 - 2022-10-21
 * Added update campaigns and feature flag configurations instantaneously with Real-Time Streaming Architecture: [`Documentation`](https://developers.kameleoon.com/python-sdk.html#streaming) or [`Product Updates`](https://www.kameleoon.com/en/blog/real-time-streaming)
 * Added a new method [`on_update_configuration`](https://developers.kameleoon.com/python-sdk.html#on_update_configuration) to handle events when configuration data is updated in real time.
