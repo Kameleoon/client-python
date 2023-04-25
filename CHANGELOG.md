@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.2.0 - 2023-04-25
+* Added a new method:
+    - [`get_engine_tracking_code`](https://developers.kameleoon.com/python-sdk.html#get_engine_tracking_code) which can be used to simplify utilization of hybrid mode
+* Renaming of methods:
+    - `obtain_feature_variable` -> [`get_feature_variable`](https://developers.kameleoon.com/python-sdk.html#get_feature_variable)
+    - `retrieve_data_from_remote_source` -> [`get_remote_date`](https://developers.kameleoon.com/python-sdk.html#get_feature_variable)
+* The method `obtain_feature_variable` has been updated to only accept a `str` type for the `feature_key` argument. Previously, it accepted both `str` and `int` types as a `Union[str, int]` argument, but this functionality is now deprecated.
+
 ## 2.1.0 - 2023-02-02
 * Added support of new feature flag rules:
     - [`get_feature_variation_key`](https://developers.kameleoon.com/python-sdk.html#get_feature_variation_key)
