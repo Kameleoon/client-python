@@ -1,6 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+^## 2.3.0 - 2023-08-14
+### Features
+* Added [`get_remote_data_async`](https://developers.kameleoon.com/python-sdk.html#get_remote_data_async) method as an asynchronous variant of [`get_remote_data`](https://developers.kameleoon.com/python-sdk.html#get_remote_data) method
+* Added new conditions for targeting:
+    - `Visitor Code`
+    - `SDK Language`
+    - `Explicit Trigger`
+    - [`Page Title & Page Url`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#pageview)
+    - [`Browser`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#browser)
+    - [`Device`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#device)
+    - [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#trackconversion)
+
 ## 2.2.0 - 2023-04-25
 
 ### Features
