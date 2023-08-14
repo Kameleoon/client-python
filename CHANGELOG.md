@@ -2,12 +2,16 @@
 All notable changes to this project will be documented in this file.
 
 ## 2.2.0 - 2023-04-25
+
+### Features
+
 * Added a new method:
     - [`get_engine_tracking_code`](https://developers.kameleoon.com/python-sdk.html#get_engine_tracking_code) which can be used to simplify utilization of hybrid mode
 * Renaming of methods:
     - `obtain_feature_variable` -> [`get_feature_variable`](https://developers.kameleoon.com/python-sdk.html#get_feature_variable)
     - `retrieve_data_from_remote_source` -> [`get_remote_date`](https://developers.kameleoon.com/python-sdk.html#get_feature_variable)
 * The method `obtain_feature_variable` has been updated to only accept a `str` type for the `feature_key` argument. Previously, it accepted both `str` and `int` types as a `Union[str, int]` argument, but this functionality is now deprecated.
+* Added possibility for [`CustomData`](https://developers.kameleoon.com/python-sdk.html#customdata) to use variable argument list of values
 
 ## 2.1.0 - 2023-02-02
 * Added support of new feature flag rules:
@@ -42,7 +46,7 @@ All notable changes to this project will be documented in this file.
 
 ## 1.0.9 - 2022-08-16
 * Fixed crash when passing invalid credentials [`client_id and client_secret`](https://developers.kameleoon.com/python-sdk.html#additional-configuration)
-* Added timeout for all network requests 
+* Added timeout for all network requests
 
 ## 1.0.8 - 2022-08-08
 * Added [`multi_threading`](https://developers.kameleoon.com/python-sdk.html#additional-configuration) parameter to work in multi-threading environment. By default SDK works in a single thread to avoid GIL's performance issues.
