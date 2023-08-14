@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-^## 2.3.0 - 2023-08-14
+## 2.3.0 - 2023-08-14
 ### Features
 * Added [`get_remote_data_async`](https://developers.kameleoon.com/python-sdk.html#get_remote_data_async) method as an asynchronous variant of [`get_remote_data`](https://developers.kameleoon.com/python-sdk.html#get_remote_data) method
 * Added new conditions for targeting:
