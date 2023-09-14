@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.4.0 - 2023-09-14
+### Features
+* Added [`get_remote_visitor_data`](https://developers.kameleoon.com/python-sdk.html#get_remote_visitor_data) method to fetch a visitor's remote data (with an optional capability to add the fetched data to the visitor)
+* Added [`get_remote_visitor_data_async`](https://developers.kameleoon.com/python-sdk.html#get_remote_data_async) method as an asynchronous variant of [`get_remote_visitor_data`](https://developers.kameleoon.com/python-sdk.html#get_remote_visitor_data) method
+### Bug fixes
+* Fixed an issue where the SDK wouldn't send tracking data if multi-threading was enabled.
+
+
 ## 2.3.0 - 2023-08-14
 ### Features
 * Added [`get_remote_data_async`](https://developers.kameleoon.com/python-sdk.html#get_remote_data_async) method as an asynchronous variant of [`get_remote_data`](https://developers.kameleoon.com/python-sdk.html#get_remote_data) method
