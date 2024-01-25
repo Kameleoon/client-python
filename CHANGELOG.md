@@ -1,6 +1,74 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2024-01-25
+### Breaking changes
+* You should no longer create a new `KameleoonClient` instance explicitly. To get an instance of `KameleoonClient`, call [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#create) instead.
+* A new `KameleoonClient` instance does not await full initialization anymore. Instead, new `wait_init` and `wait_init_async` methods allow you to check whether the client has been successfully initialized before executing other operations.
+* Renamed `get_feature_all_variables` method to [`get_feature_variation_variables`](https://developers.kameleoon.com/python-sdk.html#get_feature_variation_variables)
+* Removed all deprecated methods and errors related to **experiments**:
+  * Methods:
+    - `trigger_experiment`
+    - `get_variation_associated_data`
+    - `get_experiment_list`
+    - `get_experiment_list_for_visitor`
+  * Error types:
+    - `ExperimentConfigurationNotFound`
+    - `NotTargeted`
+    - `NotAllocated`
+    - `SiteCodeDisabled`
+* Removed additional deprecated methods:
+    - `obtain_visitor_code`
+    - `obtain_variation_associated_data`
+    - `obtain_experiment_list`
+    - `obtain_feature_variable`
+    - `obtain_feature_list`
+    - `obtain_feature_all_variables`
+    - `retrieve_data_from_remote_source`
+* Changed `KameleoonClientConfig` (previously named `KameleoonClientConfiguration`):
+    - Renamed `KameleoonClientConfiguration` to `KameleoonClientConfig`
+    - Added required parameters `client_id` and `client_secret` (`ConfigCredentialsInvalid` is raised unless `client_id` and `client_secret` are specified and non-empty)
+    - Removed `visitor_data_maximum_size` parameter
+    - Added `session_duration_minute` parameter
+    - Added `top_level_domain` parameter
+    - Renamed `actions_configuration_refresh_interval` parameter to `refresh_interval_minute`
+    - Renamed `default_timeout` parameter to `default_timeout_millisecond`
+* Changed data:
+  * `Browser`:
+    - Changed `browser_type`, `version` fields to read-only
+  * `Conversion`:
+    - Changed `goal_id`, `revenue`, `negative` fields to read-only
+  * `CustomData`:
+    - Changed `id` field to read-only
+    - Changed the data type of the `id` field to `int`
+    - Removed the deprecated `value` constructor parameter
+  * `Device`:
+    - Changed `device_type` field to read-only
+  * `PageView`:
+    - Changed `url`, `title`, `referrers` fields to read-only
+  * `UserAgent`:
+    - Changed `value` field to read-only
+    - Removed `get_value` method
+* Changed the `cookies` parameter type in [`get_visitor_code`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_visitor_code) to `Dict[str, Morsel[str]]`.
+* Changed errors:
+  * Added new exception [`FeatureEnvironmentDisabled`] indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
+    - [`get_feature_variation_key`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_feature_variation_key)
+    - [`get_feature_variable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_feature_variable)
+    - [`get_feature_variation_variables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_feature_variation_variables)
+  * Added `SiteCodeIsEmpty` exception, which the [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#create) method raises if the specified site code parameter is empty.
+  * Renamed error types:
+    - `ConfigurationNotFoundException` to `ConfigFileNotFound`
+    - `CredentialsNotFoundException` to `ConfigCredentialsInvalid`
+    - `VisitorCodeNotValid` to `VisitorCodeInvalid`
+    - `FeatureConfigurationNotFound` to `FeatureNotFound`
+    - `VariationConfigurationNotFound` to `FeatureVariationNotFound`
+    - `KameleoonException` to `KameleoonError`
+### Features
+* Implemented `KameleoonClientFactory`(https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#kameleoonclientfactory) to manage `KameleoonClient` instances:
+    - [`create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/create)
+    - [`forget`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#forget)
+* Added [`set_legal_consent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#set_legal_consent) method to determine the types of data Kameleoon includes in tracking requests. This helps you adhere to legal and regulatory requirements while responsibly managing visitor data. You can find more information in the [Consent management policy](https://help.kameleoon.com/consent-management-policy/).
+
 ## 2.4.0 - 2023-09-14
 ### Features
 * Added [`get_remote_visitor_data`](https://developers.kameleoon.com/python-sdk.html#get_remote_visitor_data) method to fetch a visitor's remote data (with an optional capability to add the fetched data to the visitor)
