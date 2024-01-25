@@ -64,7 +64,7 @@ All notable changes to this project will be documented in this file.
     - `VariationConfigurationNotFound` to `FeatureVariationNotFound`
     - `KameleoonException` to `KameleoonError`
 ### Features
-* Implemented `KameleoonClientFactory`(https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#kameleoonclientfactory) to manage `KameleoonClient` instances:
+* Implemented [`KameleoonClientFactory`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#kameleoonclientfactory) to manage `KameleoonClient` instances:
     - [`create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/create)
     - [`forget`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#forget)
 * Added [`set_legal_consent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#set_legal_consent) method to determine the types of data Kameleoon includes in tracking requests. This helps you adhere to legal and regulatory requirements while responsibly managing visitor data. You can find more information in the [Consent management policy](https://help.kameleoon.com/consent-management-policy/).
