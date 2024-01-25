@@ -51,7 +51,7 @@ All notable changes to this project will be documented in this file.
     - Removed `get_value` method
 * Changed the `cookies` parameter type in [`get_visitor_code`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_visitor_code) to `Dict[str, Morsel[str]]`.
 * Changed errors:
-  * Added new exception [`FeatureEnvironmentDisabled`] indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
+  * Added new exception `FeatureEnvironmentDisabled` indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
     - [`get_feature_variation_key`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_feature_variation_key)
     - [`get_feature_variable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_feature_variable)
     - [`get_feature_variation_variables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_feature_variation_variables)
