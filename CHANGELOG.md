@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 - 2024-02-29
+### Features
+* Added support for additional Data API servers across the world for even faster network requests.
+* Increased limit for requests to Data API: [rate limits](https://developers.kameleoon.com/apis/data-api-rest/overview/#rate-limits)
+* Added [`get_visitor_warehouse_audience`](https://developers.kameleoon.com/python-sdk.html#get_visitor_warehouse_audience) method to retrieve all data associated with a visitor's warehouse audiences and adds it to the visitor.
+
 ## 3.0.0 - 2024-01-25
 ### Breaking changes
 * You should no longer create a new `KameleoonClient` instance explicitly. To get an instance of `KameleoonClient`, call [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#create) instead.
