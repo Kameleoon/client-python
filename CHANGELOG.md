@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.3.0 - 2024-06-21
+### Features
+The [Likelihood to convert](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments) targeting condition is now available. Pre-loading the data is required using [`get_remote_visitor_data`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_remote_visitor_data) with the `kcs` parameter set to `True`.
+### Bug fixes
+* The SDK no longer logs failed tracking requests to the [Data API](https://developers.kameleoon.com/apis/data-api-rest/all-endpoints/post-visit-events/) when the user agent is identified as a bot (i.e., when the status code is 403).
+
 ## 3.2.0 - 2024-06-10
 ### Features
 * New targeting conditions are now available (some of them may require [`get_remote_visitor_data`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#getremotevisitordata) pre-loaded data)
