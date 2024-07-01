@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.3.1 - 2024-07-01
+### Features
+* Expanded the compatible versions of the `aiohttp` library to include `3.9.*`, in addition to the previously supported `3.8.*`. This version broadens the range of acceptable `aiohttp` versions, enhancing flexibility and compatibility with more recent releases of the library.
+
 ## 3.3.0 - 2024-06-21
 ### Features
 * The [Likelihood to convert](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments) targeting condition is now available. Pre-loading the data is required using [`get_remote_visitor_data`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_remote_visitor_data) with the `kcs` parameter set to `True`.
