@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.3.2 - 2024-07-02
+### Features
+* This version broadens the range of acceptable `pyyaml` and `sseclient-py` versions, enhancing flexibility and compatibility with more recent releases of the library:
+- Expanded the compatible versions of the `pyyaml` library to include `6.0.*`, in addition to the previously supported `5.4.*`.
+- Expanded the compatible versions of the `sseclient-py` library to include `1.8.*`, in addition to the previously supported `1.7.*`.
+
 ## 3.3.1 - 2024-07-01
 ### Features
 * Expanded the compatible versions of the `aiohttp` library to include `3.9.*`, in addition to the previously supported `3.8.*`. This version broadens the range of acceptable `aiohttp` versions, enhancing flexibility and compatibility with more recent releases of the library.
