@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.3.3 - 2024-07-03
+### Bug fixes
+* Resolved issues with malformed library package assembly.
+
 ## 3.3.2 - 2024-07-02
 ### Features
 * This version broadens the range of acceptable `pyyaml` and `sseclient-py` versions, enhancing flexibility and compatibility with more recent releases of the library:
