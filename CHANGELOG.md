@@ -1,6 +1,33 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.4.0 - 2024-09-05
+### Features
+* Improved the tracking mechanism to consolidate multiple visitors into a single request, combining information on all affected visitors into one request, sent once per interval.
+* Added a new parameter `instant` of the [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#flush) method. If the parameter's value is `True` the visitor's data is tracked instantly. Otherwise, the visitor's data will be tracked with next tracking interval. Default value of the parameter is `False`.
+* Added new configuration parameter `tracking_interval_millisecond` to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#initializing-the-kameleoon-client) and the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#additional-configuration) file, which is used to set interval for tracking requests. Default value is `1000` milliseconds.
+* New Kameleoon Data type [`UniqueIdentifier`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#uniqueidentifier) is introduced. It will be used in all methods instead of `is_unique_identifier` parameter. All usages of the `is_unique_identifier` parameter in the methods are marked as deprecated:
+    - [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#flush)
+    - [`track_conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#track_conversion)
+    - [`track_conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#track_conversion)
+    - [`get_feature_variation_key`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_feature_variation_key)
+    - [`get_feature_variable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_feature_variable)
+    - [`is_feature_active`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#is_feature_active)
+    - [`get_remote_visitor_data`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_remote_visitor_data)
+* Enhanced [logging](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#logging):
+  - Introduced [log levels](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#log-levels):
+    - `NONE`
+    - `ERROR`
+    - `WARNING`
+    - `INFO`
+    - `DEBUG`
+  - Added support for [custom logger](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#custom-handling-of-logs) implementations.
+* Changed the parameter `logger` in object [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#initializing-the-kameleoon-client) the deprecated.
+* Enhanced top-level domain validation within the SDK. The implementation now includes automatic trimming of extraneous symbols and provides a warning(https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#log-levels) when an invalid domain is detected.
+### Bug fixes
+* Resolved an issue where the [`flush(None, is_unique_identifier)`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#flush) method was incorrectly sending requests with `is_unique_identifier` applied to each visitor. Now, `is_unique_identifier` is only considered if `visitor_dode` is provided and not None.
+* Fixed an issue that caused duplicate entries in feature flag results for both anonymous and authorized/identified visitors during data reconciliation. This problem occurred when custom data of type mapping ID was not consistently sent for all sessions.
+
 ## 3.3.3 - 2024-07-03
 ### Bug fixes
 * Resolved issues with malformed library package assembly.
