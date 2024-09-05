@@ -22,10 +22,10 @@ All notable changes to this project will be documented in this file.
     - `INFO`
     - `DEBUG`
   - Added support for [custom logger](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#custom-handling-of-logs) implementations.
-* Changed the parameter `logger` in object [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#initializing-the-kameleoon-client) the deprecated.
-* Enhanced top-level domain validation within the SDK. The implementation now includes automatic trimming of extraneous symbols and provides a warning(https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#log-levels) when an invalid domain is detected.
+* Changed the parameters `logger` and `multi_threading` in object [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#initializing-the-kameleoon-client) the deprecated.
+* Enhanced top-level domain validation within the SDK. The implementation now includes automatic trimming of extraneous symbols and provides a [warning](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#log-levels) when an invalid domain is detected.
 ### Bug fixes
-* Resolved an issue where the [`flush(None, is_unique_identifier)`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#flush) method was incorrectly sending requests with `is_unique_identifier` applied to each visitor. Now, `is_unique_identifier` is only considered if `visitor_dode` is provided and not None.
+* Resolved an issue where the [`flush(None, is_unique_identifier)`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#flush) method was incorrectly sending requests with `is_unique_identifier` applied to each visitor. Now, `is_unique_identifier` is only considered if `visitor_code` is provided and not None.
 * Fixed an issue that caused duplicate entries in feature flag results for both anonymous and authorized/identified visitors during data reconciliation. This problem occurred when custom data of type mapping ID was not consistently sent for all sessions.
 
 ## 3.3.3 - 2024-07-03
