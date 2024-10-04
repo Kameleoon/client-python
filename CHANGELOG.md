@@ -1,6 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.5.0 - 2024-10-04
+### Features
+* Introduced new evaluation methods for clarity and improved efficiency when working with the SDK:
+  - [`get_variation`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_variation)
+  - [`get_variations`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#get_variations)
+* These methods replace the deprecated ones:
+  - [`get_feature_variation_key`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_feature_variation_key)
+  - [`get_feature_variable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_feature_variable)
+  - [`get_active_features`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_active_features)
+  - [`get_feature_variation_variables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_feature_variation_variables)
+* A new version of the [`is_feature_active`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#is_feature_active) method now includes an optional `track` parameter, which controls whether the assigned variation is tracked (default: `True`).
+* Enhanced the [`get_engine_tracking_code`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#getenginetrackingcode) method to properly handle `JS` and `CSS` variables.
+
 ## 3.4.0 - 2024-09-05
 ### Features
 * Improved the tracking mechanism to consolidate multiple visitors into a single request, combining information on all affected visitors into one request, sent once per interval.
