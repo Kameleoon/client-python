@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 3.10.0 - 2025-03-18
 ### Features
-* Added support for Contextual Bandit evaluations. Calling [`get_remote_visitor_data`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_remote_visitor_data) with the `cbs=true` flag is required for this feature to function correctly. Platform-wide release expected in March 2025.
+* Added support for Contextual Bandit evaluations. Calling [`get_remote_visitor_data`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_remote_visitor_data) with the `cbs=True` flag is required for this feature to function correctly. Platform-wide release expected in March 2025.
 
 ## 3.9.0 - 2025-02-26
 ### Features
