@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.11.0 - 2025-03-24
+### Features
+* Added new optional parameters `negative` and `metadata` to the [`track_conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#track_conversion) method.
+* Added new optional parameter `metadata` to the [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#conversion) data constructor.
+* Added new configuration parameter `network_domain` to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk/#create) and the [configuration](https://developers.kameleoon.com/python-sdk.html#additional-configuration) file. This parameter allows specifying a custom domain for all outgoing network requests.
+
 ## 3.10.0 - 2025-03-18
 ### Features
 * Added support for Contextual Bandit evaluations. Calling [`get_remote_visitor_data`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#get_remote_visitor_data) with the `cbs=True` flag is required for this feature to function correctly. Platform-wide release expected in March 2025.
