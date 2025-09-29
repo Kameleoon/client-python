@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.16.1 - 2025-09-29
+### Bug fixes
+* Fixed an issue where wrong targeting data could be selected to check in some conditions.
+* Changed the **Unsupported targeted condition type found** log's level to `INFO`.
+
 ## 3.16.0 - 2025-08-29
 ### Features
 * Added an `overwrite` flag to [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#customdata), used as the `overwrite` parameter during tracking.
