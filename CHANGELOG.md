@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.16.2 - 2025-10-16
+### Bug fixes
+* Fixed an issue where [Geolocation](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/python-sdk#geolocation) data was tracked incorrectly.
+
 ## 3.16.1 - 2025-09-29
 ### Bug fixes
 * Fixed an issue where wrong targeting data could be selected to check in some conditions.
