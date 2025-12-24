@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.17.1 - 2025-12-24
+### Bug fixes
+* Fixed an issue where **legal consent** was not taken into account during holdout evaluation.
+
 ## 3.17.0 - 2025-11-21
 ### Features
 * Updated evaluation and tracking logic to comply with GDPR requirements when consent is not given:
